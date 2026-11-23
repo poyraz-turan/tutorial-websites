@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Her türlü HTML öğesini içeren örnek sayfa">
+    <meta name="author" content="Örnek Yazar">
+    <title>HTML Öğeleri Vitrini</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: #222;
+            background: #f4f6f9;
+        }
+
+        header,
+        footer {
+            background: #1f2a44;
+            color: #fff;
+            padding: 1.5rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        header nav a {
+            color: #9fc2ff;
+            text-decoration: none;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        section {
+            background: #fff;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+        }
+
+        h2 {
+            border-bottom: 2px solid #e0e6ef;
+            padding-bottom: .4rem;
+        }
+
+        code {
+            background: #eef1f6;
+            padding: .1em .35em;
+            border-radius: 4px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: .5rem;
+        }
+
+        th,
+        td {
+            border: 1px solid #cfd6e0;
+            padding: .5rem .75rem;
+            text-align: left;
+        }
+
+        th {
+            background: #eef1f6;
+        }
+
+        fieldset {
+            border: 1px solid #cfd6e0;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 .5rem;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            font: inherit;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="date"],
+        input[type="tel"],
+        select,
+        textarea {
+            padding: .4rem;
+            border: 1px solid #cfd6e0;
+            border-radius: 6px;
+            width: 100%;
+            max-width: 320px;
+        }
+
+        button,
+        input[type="submit"],
+        input[type="reset"] {
+            padding: .5rem 1rem;
+            border: none;
+            border-radius: 6px;
+            background: #2f6fed;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2559c7;
+        }
+
+        figure {
+            margin: 0;
+        }
+
+        figcaption {
+            font-size: .9em;
+            color: #666;
+        }
+
+        .flex {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        mark {
+            background: #fff2a8;
+        }
+
+        progress {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>🌐 HTML Öğeleri Vitrini</h1>
+        <nav>
+            <ul>
+                <li><a href="#metin">Metin</a></li>
+                <li><a href="#listeler">Listeler</a></li>
+                <li><a href="#tablo">Tablo</a></li>
+                <li><a href="#medya">Medya</a></li>
+                <li><a href="#form">Form</a></li>
+                <li><a href="#semantik">Semantik</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- METİN ÖĞELERİ -->
+        <section id="metin">
+            <h2>📝 Metin Öğeleri</h2>
+            <h1>Başlık 1</h1>
+            <h2>Başlık 2</h2>
+            <h3>Başlık 3</h3>
+            <h4>Başlık 4</h4>
+            <h5>Başlık 5</h5>
+            <h6>Başlık 6</h6>
+
+            <p>
+                Bu normal bir paragraf. İçinde <strong>kalın</strong>, <em>italik</em>,
+                <u>altı çizili</u>, <s>üstü çizili</s>, <mark>vurgulanmış</mark>,
+                <small>küçük</small>, <sub>alt indis</sub> ve <sup>üst indis</sup> var.
+                <br>
+                <abbr title="HyperText Markup Language">HTML</abbr> kısaltması.
+            </p>
+
+            <p><q>Kısa alıntı burada.</q></p>
+            <blockquote cite="https://example.com">
+                Uzun alıntı burada. Blok alıntı örneği.
+            </blockquote>
+
+            <pre><code>// Kod bloğu örneği
+function selamla(isim) {
+    return "Merhaba, " + isim;
+}</code></pre>
+
+            <p><kbd>Ctrl</kbd> + <kbd>S</kbd> ile kaydedin.</p>
+            <p><samp>Hata: Dosya bulunamadı</samp></p>
+            <p>Sonuç: <var>x</var> = <var>y</var> + 2</p>
+
+            <hr>
+            <p><time datetime="2024-05-20">20 Mayıs 2024</time></p>
+        </section>
+
+        <!-- LİSTELER -->
+        <section id="listeler">
+            <h2>📋 Listeler</h2>
+
+            <h3>Sırasız Liste</h3>
+            <ul>
+                <li>Elma</li>
+                <li>Armut</li>
+                <li>
+                    Muz
+                    <ul>
+                        <li>Sarı muz</li>
+                        <li>Yeşil muz</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Sıralı Liste</h3>
+            <ol>
+                <li>Birinci</li>
+                <li>İkinci</li>
+                <li>Üçüncü</li>
+            </ol>
+
+            <h3>Açıklama Listesi</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>İşaretleme dili</dd>
+                <dt>CSS</dt>
+                <dd>Stil dili</dd>
+                <dt>JavaScript</dt>
+                <dd>Programlama dili</dd>
+            </dl>
+        </section>
+
+        <!-- TABLO -->
+        <section id="tablo">
+            <h2>📊 Tablo</h2>
+            <table>
+                <caption>Öğrenci Notları</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Ad</th>
+                        <th scope="col">Soyad</th>
+                        <th scope="col">Not</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ahmet</td>
+                        <td>Yılmaz</td>
+                        <td>85</td>
+                    </tr>
+                    <tr>
+                        <td>Ayşe</td>
+                        <td>Kaya</td>
+                        <td>92</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Ortalama</td>
+                        <td>88.5</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- MEDYA -->
+        <section id="medya">
+            <h2>🖼️ Medya</h2>
+
+            <figure>
+                <img src="https://picsum.photos/400/200" alt="Örnek görsel" width="400" height="200">
+                <figcaption>Şekil 1: Rastgele bir görsel (picsum.photos)</figcaption>
+            </figure>
+
+            <h3>Ses</h3>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Tarayıcınız ses öğesini desteklemiyor.
+            </audio>
+
+            <h3>Video</h3>
+            <video controls width="400" poster="https://picsum.photos/400/225">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Tarayıcınız video öğesini desteklemiyor.
+            </video>
+
+            <h3>SVG</h3>
+            <svg width="120" height="120" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" fill="#2f6fed" />
+                <text x="50" y="58" text-anchor="middle" fill="white" font-size="20">SVG</text>
+            </svg>
+
+            <h3>Canvas</h3>
+            <canvas id="cizimAlani" width="200" height="100" style="border:1px solid #ccc;"></canvas>
+            <script>
+                const c = document.getElementById('cizimAlani').getContext('2d');
+                c.fillStyle = '#ff7b54';
+                c.fillRect(20, 20, 60, 60);
+                c.fillStyle = '#2f6fed';
+                c.beginPath();
+                c.arc(140, 50, 30, 0, Math.PI * 2);
+                c.fill();
+            </script>
+        </section>
+
+        <!-- FORM -->
+        <section id="form">
+            <h2>🧾 Form Öğeleri</h2>
+            <form action="#" method="post">
+
+                <fieldset>
+                    <legend>Kişisel Bilgiler</legend>
+
+                    <p>
+                        <label for="ad">Ad:</label><br>
+                        <input type="text" id="ad" name="ad" placeholder="Adınız" required>
+                    </p>
+
+                    <p>
+                        <label for="eposta">E-posta:</label><br>
+                        <input type="email" id="eposta" name="eposta" placeholder="ornek@mail.com">
+                    </p>
+
+                    <p>
+                        <label for="sifre">Şifre:</label><br>
+                        <input type="password" id="sifre" name="sifre">
+                    </p>
+
+                    <p>
+                        <label for="yas">Yaş:</label><br>
+                        <input type="number" id="yas" name="yas" min="0" max="120">
+                    </p>
+
+                    <p>
+                        <label for="tarih">Doğum Tarihi:</label><br>
+                        <input type="date" id="tarih" name="tarih">
+                    </p>
+
+                    <p>
+                        <label for="telefon">Telefon:</label><br>
+                        <input type="tel" id="telefon" name="telefon" pattern="[0-9]{10}">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Seçimler</legend>
+
+                    <p>Cinsiyet:</p>
+                    <label><input type="radio" name="cinsiyet" value="k"> Kadın</label>
+                    <label><input type="radio" name="cinsiyet" value="e"> Erkek</label>
+
+                    <p>İlgi Alanları:</p>
+                    <label><input type="checkbox" name="ilgi" value="muzik"> Müzik</label>
+                    <label><input type="checkbox" name="ilgi" value="spor"> Spor</label>
+                    <label><input type="checkbox" name="ilgi" value="kitap"> Kitap</label>
+
+                    <p>
+                        <label for="sehir">Şehir:</label><br>
+                        <select id="sehir" name="sehir">
+                            <optgroup label="Marmara">
+                                <option value="ist">İstanbul</option>
+                                <option value="bursa">Bursa</option>
+                            </optgroup>
+                            <optgroup label="İç Anadolu">
+                                <option value="ank">Ankara</option>
+                                <option value="konya">Konya</option>
+                            </optgroup>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="mesaj">Mesaj:</label><br>
+                        <textarea id="mesaj" name="mesaj" rows="4" placeholder="Mesajınızı yazın..."></textarea>
+                    </p>
+
+                    <p>
+                        <label for="dosya">Dosya:</label><br>
+                        <input type="file" id="dosya" name="dosya">
+                    </p>
+
+                    <p>
+                        <label for="renk">Renk:</label><br>
+                        <input type="color" id="renk" name="renk" value="#2f6fed">
+                    </p>
+
+                    <p>
+                        <label for="aralik">Aralık: <output name="sonuc" for="aralik">50</output></label><br>
+                        <input type="range" id="aralik" name="aralik" min="0" max="100" value="50"
+                            oninput="this.form.sonuc.value=this.value">
+                    </p>
+
+                    <p>
+                        <label for="ilerleme">İlerleme:</label><br>
+                        <progress id="ilerleme" max="100" value="70">70%</progress>
+                    </p>
+
+                    <p>
+                        <label for="metre">Ölçüm:</label><br>
+                        <meter id="metre" min="0" max="100" low="30" high="80" optimum="90" value="65">65/100</meter>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <input type="hidden" name="gizli" value="12345">
+                    <button type="submit">Gönder</button>
+                    <button type="reset">Temizle</button>
+                </p>
+            </form>
+        </section>
+
+        <!-- SEMANTİK ÖĞELER -->
+        <section id="semantik">
+            <h2>🏗️ Semantik Öğeler</h2>
+
+            <article>
+                <header>
+                    <h3>Makale Başlığı</h3>
+                    <p><time datetime="2024-05-20">20 Mayıs 2024</time> • Yazar: <strong>Ali</strong></p>
+                </header>
+                <p>Bu bir <code>&lt;article&gt;</code> örneğidir. Bağımsız bir içerik parçası.</p>
+                <aside>
+                    <p>💡 Bu bir <code>&lt;aside&gt;</code>: Yan not.</p>
+                </aside>
+                <footer>Etiketler: <a href="#">html</a>, <a href="#">örnek</a></footer>
+            </article>
+
+            <details>
+                <summary>Detayları göster (tıklayın)</summary>
+                <p>Burada gizli içerik var! <code>&lt;details&gt;</code> ve <code>&lt;summary&gt;</code> ile yapıldı.
+                </p>
+            </details>
+
+            <p>
+                Bu cümlede <ins>yeni eklenmiş</ins> ve <del>silinmiş</del> metin var.
+            </p>
+
+            <p>
+                İlerleme çubuğu:
+                <progress value="40" max="100">40%</progress>
+            </p>
+
+            <dialog id="ornekDialog">
+                <p>Bu bir <code>&lt;dialog&gt;</code> penceresi!</p>
+                <button onclick="document.getElementById('ornekDialog').close()">Kapat</button>
+            </dialog>
+            <button onclick="document.getElementById('ornekDialog').showModal()">Dialog Aç</button>
+        </section>
+
+        <!-- IFRAME -->
+        <section>
+            <h2>🪟 Iframe</h2>
+            <iframe src="https://example.com" title="Örnek iframe" width="100%" height="250"
+                style="border:1px solid #ccc; border-radius:8px;">
+            </iframe>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 HTML Vitrini — Tüm hakları saklıdır.</p>
+        <p><small>İletişim: <a href="mailto:ornek@mail.com" style="color:#9fc2ff;">ornek@mail.com</a></small></p>
+    </footer>
+
+</body>
+
+</html>
